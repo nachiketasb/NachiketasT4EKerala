@@ -1,0 +1,79 @@
+{
+    "lab": {
+      "description": {
+            "id": "",
+            "name": "",
+            "discipline": [""],
+            "status": "",
+            "type": "",
+            "integration_level": 0,
+            "server-side": true,
+            "developer": [
+                {
+                    "contact": {
+                        "email": "nb@gmail.com",
+                        "alternate_email": "bn@gmail.com",
+                        "mobile_number": "1234567899",
+                        "office_number": "12345678"
+                    },
+                    "department": "",
+                    "institute": "MVL",
+                    "name": "MVL",
+                    "organization": "MVL",
+                    "role": "c",
+                    "title": "Mr",
+                    "web": ""
+                }
+            ]
+        },
+        "build_requirements": {
+            "platform": {
+                "arch": "",
+                "build_steps": {
+                    "build": ["make -C ../src"],
+                    "configure": [],
+                    "post_build": [],
+                    "pre_build": [],
+                    "status": []
+                },
+                "installer": [],
+                "os": "ubuntu",
+                "osVersion": "12",
+                "service_pack": ""
+            }
+        },
+        "runtime_requirements": {
+            "platform": {
+                "arch": "",
+                "hosting": "",
+                "installer": ["sudo apt-get update", 
+             "sudo apt-get install -y apache2"],
+                "lab_actions": {
+                    "backup": [],
+                    "clean": [],
+                    "init": ["mv /var/www/index.html index.html.default",
+         "cp -r ../src/* /var/www/"],
+                    "pause": [],
+                    "publish": [],
+                    "restore": ["restore"],
+                    "resume": [],
+                    "shutdown": ["service apache2 stop"],
+                    "start": ["service apache2 start"],
+                    "stats": [],
+                    "stop": []
+                },
+                "memory": {
+                    "max_required": "",
+                    "min_required": ""
+                },
+                "os": "ubuntu",
+                "osVersion": "12",
+                "servicepack": "",
+                "storage": {
+                    "min_required": ""
+                }
+            }
+        }
+    },
+    "template": "1.0"
+}
